@@ -48,17 +48,24 @@
     --image-outline: #03DAC5 solid 2px;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
 body {
     font-family: 'Roboto Light', sans-serif;
     font-size: 20px;
     background: black;
     color: white;
+    overflow: hidden;
 }
 
 .main {
     display: flex;
     margin: 0 auto;
-    width: 1500px;
+    height: 100vh;
     background: linear-gradient(var(--main-bg));
     border-radius: 10px;
 }
