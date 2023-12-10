@@ -1,5 +1,30 @@
 let currentImage = 0
 
+window.addEventListener('DOMContentLoaded', function () {
+    fitObject();
+});
+
+window.addEventListener('resize', function () {
+    fitObject();
+});
+
+function fitObject() {
+    let object = document.querySelector('.main');
+    let aspectRatio = object.width / object.height;
+
+    let viewportWidth = window.innerWidth;
+    let viewportHeight = window.innerHeight;
+    let viewportAspectRatio = viewportWidth / viewportHeight;
+
+    if (aspectRatio > viewportAspectRatio) {
+        object.style.width = viewportWidth + 'px';
+        object.style.height = (viewportWidth / aspectRatio) + 'px';
+    } else {
+        object.style.height = viewportHeight + 'px';
+        object.style.width = (viewportHeight * aspectRatio) + 'px';
+    }
+}
+
 function changeInfo() {
     let infoName = document.getElementById("info-name")
     infoName.innerText = images[currentImage].slice(0, -4)
@@ -42,46 +67,4 @@ function previousImage() {
 
     currentImage--;
     changeImage();
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-    fitObject();
-});
-
-window.addEventListener('resize', function () {
-    fitObject();
-});
-
-function fitObject() {
-    let object = document.querySelector('.main');
-    let aspectRatio = object.width / object.height;
-
-    let viewportWidth = window.innerWidth;
-    let viewportHeight = window.innerHeight;
-    let viewportAspectRatio = viewportWidth / viewportHeight;
-
-    if (aspectRatio > viewportAspectRatio) {
-        object.style.width = viewportWidth + 'px';
-        object.style.height = (viewportWidth / aspectRatio) + 'px';
-    } else {
-        object.style.height = viewportHeight + 'px';
-        object.style.width = (viewportHeight * aspectRatio) + 'px';
-    }
-}
-
-window.onload = function () {
-    hideAddressBar();
-    window.addEventListener("orientationchange", function () {
-        hideAddressBar();
-    }, false);
-}
-
-function hideAddressBar() {
-    setTimeout(function () {
-        document.body.style.height = window.outerHeight + 'px';
-        setTimeout(function () {
-            window.scrollTo(0, 1);
-        }, 1100);
-    }, 1000);
-    return false;
 }
