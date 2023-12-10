@@ -72,7 +72,7 @@ body {
 }
 
 .info {
-    max-width: 35%;
+    min-width: 20%;
     width: auto;
     background: linear-gradient(var(--info-field-bg));
     padding: 10px;
