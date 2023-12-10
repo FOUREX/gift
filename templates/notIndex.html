@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        setInterval(function yep() {
+            let element = document.getElementById("yep")
+
+            element.innerText = `${window.innerWidth} x ${window.innerHeight}`
+        }, 10)
+    </script>
+
+</head>
+<body onload="yep()">
+    <div id="yep" class="yep">Size</div>
+</body>
+</html>

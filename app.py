@@ -16,7 +16,7 @@ def load_descriptions():
 
 @app.route('/')
 def root():
-    return render_template("index.html", images=load_images(), descriptions=load_descriptions())
+    return render_template("notIndex.html", images=load_images(), descriptions=load_descriptions())
 
 
 if __name__ == '__main__':
