@@ -58,19 +58,22 @@ body {
     font-size: 20px;
     background: black;
     color: white;
-    overflow: hidden;
 }
 
 .main {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+
     display: flex;
-    margin: 0 auto;
     height: 100vh;
     background: linear-gradient(var(--main-bg));
     border-radius: 10px;
 }
 
 .info {
-    width: 35%;
+    max-width: 35%;
+    width: auto;
     background: linear-gradient(var(--info-field-bg));
     padding: 10px;
     border-radius: 10px;
@@ -150,7 +153,12 @@ hr {
 }
 
 .main img {
-    width: 65%;
+    max-height: 100%;
+    max-width: 100%;
+
+    height: auto;
+    width: auto;
+
     border-radius: 10px;
     margin: 25px;
     outline: var(--image-outline);

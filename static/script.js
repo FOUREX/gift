@@ -43,3 +43,28 @@ function previousImage() {
     currentImage--;
     changeImage();
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+    fitObject();
+});
+
+window.addEventListener('resize', function () {
+    fitObject();
+});
+
+function fitObject() {
+    let object = document.querySelector('.main');
+    let aspectRatio = object.width / object.height;
+
+    let viewportWidth = window.innerWidth;
+    let viewportHeight = window.innerHeight;
+    let viewportAspectRatio = viewportWidth / viewportHeight;
+
+    if (aspectRatio > viewportAspectRatio) {
+        object.style.width = viewportWidth + 'px';
+        object.style.height = (viewportWidth / aspectRatio) + 'px';
+    } else {
+        object.style.height = viewportHeight + 'px';
+        object.style.width = (viewportHeight * aspectRatio) + 'px';
+    }
+}
