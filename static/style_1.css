@@ -1,0 +1,112 @@
+:root {
+    --main-bg: -45deg, #1F2B56, #3E1E57;
+    --info-field-bg: -45deg, #1F2B56, #3E1E57;
+    --navigation-bg: #1d3263;
+    --navigation-color: #D73CBE;
+    --description-content-color: white;
+    --outline: white solid 0px;
+    --image-outline: #D73CBE solid 2px;
+}
+
+body {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 20px;
+    background: black;
+    color: white;
+}
+
+.main {
+    display: flex;
+    margin: 0 auto;
+    width: 1500px;
+    background: linear-gradient(var(--main-bg));
+    border-radius: 10px;
+}
+
+.info {
+    width: 35%;
+    background: linear-gradient(var(--info-field-bg));
+    padding: 10px;
+    border-radius: 10px;
+    margin: 25px 25px 25px 0;
+    outline: var(--outline);
+    outline-offset: -2px;
+}
+
+.info-bar {
+    display: flex;
+    margin: 0 -10px 0 -10px;
+    color: var(--navigation-color);
+}
+
+.info-bar-element {
+    margin: 0 10px 0 10px;
+}
+
+.info-name {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--navigation-bg);
+}
+
+.info-counter {
+    margin-left: auto;
+}
+
+.info-button {
+    text-align: center;
+    width: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--navigation-bg);
+    user-select: none;
+}
+
+.info-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.info-button:active {
+    transform: scale(0.9);
+}
+
+.description {
+    word-wrap: unset;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    outline: var(--outline);
+    outline-offset: -2px;
+}
+
+.description-content {
+    color: var(--description-content-color);
+}
+
+.yep {
+    border-radius: 10px;
+    background: var(--navigation-bg);
+    color: var(--navigation-color);
+    padding: 10px;
+    margin: -10px -10px 10px -10px;
+}
+
+hr {
+    width: 80%;
+    margin: 0 15px 15px 15px;
+    border-radius: 2px;
+    border: 0;
+    background-color: white;
+    height: 2px;
+}
+
+.main img {
+    width: 65%;
+    border-radius: 10px;
+    margin: 25px;
+    outline: var(--image-outline);
+    outline-offset: -2px;
+}

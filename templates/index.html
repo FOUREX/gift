@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gift</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body onload="changeImage()">
+    <script>
+        const images = {{ images | tojson }}
+        const descriptions = JSON.parse('{{ descriptions | tojson | safe }}')
+        console.log(descriptions)
+    </script>
+
+    <div class="main">
+        <img id="image" src="" alt="">
+
+        <div class="info">
+            <div class="info-bar">
+                <div class="info-button info-bar-element" onclick="previousImage()"><</div>
+                <div class="info-name">
+                    <div id="info-name"></div>
+                    <div class="info-counter" id="info-counter">
+                    </div>
+                </div>
+                <div class="info-button info-bar-element" onclick="nextImage()">></div>
+            </div>
+            <div class="description description-content" id="description-0"></div>
+
+            <div class="description">
+                <div class="yep">
+                    Від Маші
+                </div>
+                <div class="description-content" id="description-1"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
