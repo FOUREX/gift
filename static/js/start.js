@@ -1,16 +1,13 @@
 let _rotate = document.getElementById("rotate")
 let _scroll = document.getElementById("scroll")
+let _done = document.getElementById("done")
 
-document.addEventListener("resize", function () {
+function check() {
     if (window.matchMedia("(orientation: landscape)").matches) {
-        _rotate.style.display = "flex"
+        _done.style.display = "flex"
     } else {
-        _rotate.style.display = "none"
+        _done.style.display = "none"
     }
-})
-
-function onLoad() {
-
 }
 
 function redirect() {
