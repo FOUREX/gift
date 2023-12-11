@@ -1,7 +1,7 @@
 let _rotate = document.getElementById("rotate")
 let _scroll = document.getElementById("scroll")
 
-document.addEventListener("orientationchange", function () {
+document.addEventListener("resize", function () {
     if (window.matchMedia("(orientation: landscape)").matches) {
         _rotate.style.display = "flex"
     } else {
