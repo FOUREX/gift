@@ -1,5 +1,3 @@
-setInterval(function yep() {
-    let element = document.getElementById("yep")
-
-    element.innerText = `${window.innerWidth} x ${window.innerHeight}`
-}, 10)
+function redirect() {
+    window.location.href = `http://127.0.0.1:5000/main/width=${window.innerWidth}/height=${window.innerHeight}`
+}

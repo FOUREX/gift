@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="/static/js/script.js"></script>
 </head>
-<body onload="changeImage()">
+<body onload="onLoad()">
     <script>
+        const mainWidth = {{ width }}
+        const mainHeight = {{ height }}
         const images = {{ images | tojson }}
         const descriptions = JSON.parse('{{ descriptions | tojson | safe }}')
-        console.log(descriptions)
     </script>
 
     <div class="main">

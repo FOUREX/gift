@@ -1,13 +1,12 @@
 let currentImage = 0
 
-window.addEventListener("load", setTimeout( function(){ window.scrollTo(0, 1) }, 0));
-window.addEventListener('DOMContentLoaded', function () {
-    fitObject();
-});
+// window.addEventListener('DOMContentLoaded', function () {
+//     fitObject();
+// });
 
-window.addEventListener('resize', function () {
-    fitObject();
-});
+// window.addEventListener('resize', function () {
+//     fitObject();
+// });
 
 function fitObject() {
     let object = document.querySelector('.main');
@@ -24,6 +23,14 @@ function fitObject() {
         object.style.height = viewportHeight + 'px';
         object.style.width = (viewportHeight * aspectRatio) + 'px';
     }
+}
+
+function onLoad() {
+    changeImage()
+
+    let element = document.getElementsByClassName("main")[0]
+    element.style.width = `${mainWidth}px`
+    element.style.height = `${mainHeight}px`
 }
 
 function changeInfo() {
