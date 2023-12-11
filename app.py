@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 def load_images():
-    return listdir("static/images")
+    return listdir("static/images/webp")
 
 
 def load_descriptions():
