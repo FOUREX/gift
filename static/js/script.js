@@ -1,13 +1,5 @@
 let currentImage = 0
 
-// window.addEventListener('DOMContentLoaded', function () {
-//     fitObject();
-// });
-
-// window.addEventListener('resize', function () {
-//     fitObject();
-// });
-
 function fitObject() {
     let object = document.querySelector('.main');
     let aspectRatio = object.width / object.height;
@@ -31,8 +23,6 @@ function onLoad() {
     let element = document.getElementsByClassName("main")[0]
     element.style.width = `${mainWidth}px`
     element.style.height = `${mainHeight}px`
-
-    window.scrollTo(0, document.body.scrollHeight)
 }
 
 function changeInfo() {
