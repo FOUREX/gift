@@ -2,6 +2,7 @@ from os import listdir
 from json import load
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
 
 
@@ -21,7 +22,7 @@ def root():
 
 @app.route("/main/width=<int:width>/height=<int:height>")
 def main(width: int, height: int):
-    return render_template("index.html", width=width, height=height,
+    return render_template("index.html", mainWidth=width, mainHeight=height,
                            images=load_images(), descriptions=load_descriptions())
 
 

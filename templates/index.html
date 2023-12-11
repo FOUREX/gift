@@ -9,8 +9,8 @@
 </head>
 <body onload="onLoad()">
     <script>
-        const mainWidth = {{ width }}
-        const mainHeight = {{ height }}
+        const mainWidth = {{ mainWidth }}
+        const mainHeight = {{ mainHeight }}
         const images = {{ images | tojson }}
         const descriptions = JSON.parse('{{ descriptions | tojson | safe }}')
     </script>
