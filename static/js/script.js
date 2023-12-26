@@ -85,6 +85,12 @@ function enableVideo() {
     let infoCounter = document.getElementById("info-counter")
     infoCounter.innerText = `${currentImage + 1}/${images.length + 1}`
 
+    let description = document.getElementById("description-0")
+    description.innerText = descriptions["Відево"]
+
+    description = document.getElementById("description-1")
+    description.innerText = descriptions["Відево"]
+
     let image = document.getElementById("image")
     let video = document.getElementById("vid")
 
