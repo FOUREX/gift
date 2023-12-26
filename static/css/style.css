@@ -1,43 +1,3 @@
-.root {
-    --main-bg: -45deg, #1E134D, #54154B;
-    --info-field-bg: -45deg, #1E134D, #54154B;
-    --navigation-bg: #1E134D;
-    --navigation-color: #D73CBE;
-    --description-content-color: white;
-    --outline: white solid 0px;
-    --image-outline: #D73CBE solid 2px;
-}
-
-.root2 {
-    --main-bg: -45deg, #2F3D81, #1B153F;
-    --info-field-bg: -45deg, #2F3D81, #54154B;
-    --navigation-bg: #1E134D;
-    --navigation-color: #168BD5;
-    --description-content-color: white;
-    --outline: white solid 0px;
-    --image-outline: #255D87 solid 2px;
-}
-
-.root2 {
-    --main-bg: -45deg, #282828, #282828;
-    --info-field-bg: -45deg, #363636, #363636;
-    --navigation-bg: #00897B;
-    --navigation-color: white;
-    --description-content-color: white;
-    --outline: white solid 0px;
-    --image-outline: #00897B solid 2px;
-}
-
-.root3 {
-    --main-bg: -45deg, #007C7C, #003E3E;
-    --info-field-bg: -45deg, #363636, #363636;
-    --navigation-bg: #00BABA;
-    --navigation-color: white;
-    --description-content-color: white;
-    --outline: white solid 0px;
-    --image-outline: #00897B solid 2px;
-}
-
 :root {
     --main-bg: -45deg, #292929, #292929;
     --info-field-bg: -45deg, #363636, #363636;
@@ -61,28 +21,13 @@ body {
 }
 
 .main {
-    width: 1920px;
-    height: 945px;
     display: flex;
-    background: linear-gradient(var(--main-bg));
-    border-radius: 10px;
-}
-
-.main_ {
-    /*max-width: 100%;*/
-    /*max-height: 100%;*/
-    margin: auto;
-
-    width: 0;
-    height: 0;
-
-    display: flex;
-    /*height: 100vh;*/
     background: linear-gradient(var(--main-bg));
     border-radius: 10px;
 }
 
 .info {
+    overflow-y: scroll;
     min-width: 20%;
     width: auto;
     background: linear-gradient(var(--info-field-bg));
@@ -91,6 +36,10 @@ body {
     margin: 25px 25px 25px 0;
     outline: var(--outline);
     outline-offset: -2px;
+}
+
+.info::-webkit-scrollbar {
+    display: none;
 }
 
 .info-bar {
@@ -140,6 +89,7 @@ body {
     border-radius: 10px;
     outline: var(--outline);
     outline-offset: -2px;
+
 }
 
 .description-content {
@@ -174,4 +124,27 @@ hr {
     margin: 25px;
     outline: var(--image-outline);
     outline-offset: -2px;
+}
+
+.vid {
+    max-height: 100%;
+    max-width: 100%;
+
+    height: auto;
+    width: auto;
+
+    border-radius: 10px;
+    margin: 25px;
+    outline-offset: -2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.vid video {
+    width: 100%;
+    outline: var(--image-outline);
+    border-radius: 10px;
 }

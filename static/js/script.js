@@ -1,4 +1,4 @@
-let currentImage = 0
+let currentImage = 7
 
 function fitObject() {
     let object = document.querySelector('.main');
@@ -27,14 +27,14 @@ function onLoad() {
 
 function changeInfo() {
     let infoName = document.getElementById("info-name")
-    infoName.innerText = images[currentImage].slice(0, -5)
+    infoName.innerText = images[currentImage].slice(2, -5)
 
     let infoCounter = document.getElementById("info-counter")
-    infoCounter.innerText = `${currentImage + 1}/${images.length}`
+    infoCounter.innerText = `${currentImage + 1}/${images.length + 1}`
 }
 
 function changeDescription() {
-    let yep = descriptions[images[currentImage].slice(0, -5)]
+    let yep = descriptions[images[currentImage].slice(2, -5)]
 
     let description = document.getElementById("description-0")
     description.innerText = yep[0]
@@ -52,6 +52,11 @@ function changeImage() {
 }
 
 function nextImage() {
+    if (currentImage === images.length - 1) {
+        currentImage++
+        enableVideo()
+    }
+
     if (currentImage >= images.length - 1) {
         return null
     }
@@ -61,10 +66,37 @@ function nextImage() {
 }
 
 function previousImage() {
+    if (currentImage === images.length) {
+        disableVideo()
+    }
+
     if (currentImage <= 0) {
         return null
     }
 
     currentImage--;
     changeImage();
+}
+
+function enableVideo() {
+    let infoName = document.getElementById("info-name")
+    infoName.innerText = "Відево"
+
+    let infoCounter = document.getElementById("info-counter")
+    infoCounter.innerText = `${currentImage + 1}/${images.length + 1}`
+
+    let image = document.getElementById("image")
+    let video = document.getElementById("vid")
+
+    image.style.display = "none"
+    video.style.display = "flex"
+    video.style.width = `${image.width}px`
+}
+
+function disableVideo() {
+    let image = document.getElementById("image")
+    let video = document.getElementById("vid")
+
+    image.style.display = "block"
+    video.style.display = "none"
 }
