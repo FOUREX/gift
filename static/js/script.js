@@ -1,4 +1,4 @@
-let currentImage = 7
+let currentImage = 0
 
 function fitObject() {
     let object = document.querySelector('.main');
