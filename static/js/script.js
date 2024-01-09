@@ -1,4 +1,4 @@
-let currentImage = 0
+let currentImage = 7
 
 function fitObject() {
     let object = document.querySelector('.main');
@@ -93,7 +93,9 @@ function enableVideo() {
 
     let image = document.getElementById("image")
     let video = document.getElementById("vid")
+    let changeResolutionButton = document.getElementById("change-resolution-button")
 
+    changeResolutionButton.style.display = "flex"
     image.style.display = "none"
     video.style.display = "flex"
     video.style.width = `${image.width}px`
@@ -102,7 +104,15 @@ function enableVideo() {
 function disableVideo() {
     let image = document.getElementById("image")
     let video = document.getElementById("vid")
+    let changeResolutionButton = document.getElementById("change-resolution-button")
 
+    changeResolutionButton.style.display = "none"
     image.style.display = "block"
     video.style.display = "none"
+}
+
+function changeResolution() {
+    let video = document.getElementById("video")
+
+    video.src = "/static/videos/Відево_480p.mp4"
 }

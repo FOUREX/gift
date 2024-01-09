@@ -82,6 +82,28 @@ body {
     transform: scale(0.9);
 }
 
+.change-resolution-button {
+    padding: 10px;
+    color: black;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--navigation-bg);
+    user-select: none;
+    outline: white dashed 2px;
+    outline-offset: -2px;
+}
+
+.change-resolution-button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.change-resolution-button:active {
+    transform: scale(0.98);
+}
+
 .description {
     word-wrap: unset;
     margin: 10px 0 0 0;
